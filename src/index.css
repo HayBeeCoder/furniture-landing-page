@@ -1,3 +1,29 @@
+/* @font-face {
+    font-family: 'Google Sans';
+    font-weight: normal;
+    src: url("./assets/fonts/google-sans/ProductSans-Regular.woff") format("woff");
+}
+@font-face {
+    font-family: 'Google Sans';
+    src: url("./assets/fonts/google-sans/ProductSans-Medium.woff") format("woff");
+} */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    @font-face {
+        font-family: 'Google Sans';
+        font-weight: normal;
+        src: url("./assets/fonts/google-sans/ProductSans-Regular.woff") format("woff");
+    }
+    @font-face {
+        font-family: 'Google Sans';
+        src: url("./assets/fonts/google-sans/ProductSans-Medium.woff") format("woff");
+    }
+    @font-face {
+        font-family: 'Google Sans';
+        src: url("./assets/fonts/google-sans/ProductSans-Light.woff") format("woff");
+    }
+}

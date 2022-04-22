@@ -8,6 +8,7 @@ module.exports = {
       fontFamily: {
         montserrat: ['Montserrat', 'sans-serif'],
         nuto: ['Noto Serif Display', 'serif'],
+        "google-sans": ["Google Sans", "sans"]
       },
       colors: {
         customGreen: "#244D4D",
