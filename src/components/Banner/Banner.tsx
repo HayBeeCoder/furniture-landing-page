@@ -9,7 +9,7 @@ const Banner = () => {
 
   useEffect(() => {
     const screenWidth = window.innerWidth;
-    console.log(screenWidth);
+    
     if (screenWidth <= 768) {
       let baseWidth = boxRef?.current?.offsetWidth;
       let width: number;
