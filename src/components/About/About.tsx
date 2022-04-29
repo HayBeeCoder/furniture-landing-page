@@ -4,7 +4,7 @@ import AboutItem from "./AboutItem";
 
 const About = () => {
   return (
-    <section className="px-8 py-12">
+    <section className="px-8 py-12  lg:px-24 ">
       <div className="mb-7 text-center md:w-80 md:text-left">
         <h2 className="font-nuto text-customGreen text-[35px] font-bold leading-tight">
           About Us
