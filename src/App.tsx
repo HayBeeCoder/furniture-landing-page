@@ -7,6 +7,7 @@ import Banner from './components/Banner'
 import PerkBanner from './components/PerkBanner'
 import About from './components/About'
 import Products from './components/Products.tsx'
+import Testimonials from './components/Testimonials'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -20,6 +21,7 @@ function App() {
        <PerkBanner/>
        <About/>
        <Products/>
+       <Testimonials />
     </main>
    </>
   )
