@@ -8,7 +8,7 @@ interface Props {
 
 const Button: React.FC<Props> = ({textColor, bgColor,children}) => {
   return (
-    <button className='text-[19px] py-4 px-8 rounded-full hover:opacity-95' 
+    <button className='text-base lg:text-[19px] py-2 px-4 lg:py-4 lg:px-8 rounded-full hover:opacity-95' 
         style={{color: `${textColor}` ,  backgroundColor: `${bgColor}`}}
     >
 
