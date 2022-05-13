@@ -17,7 +17,7 @@ const Perk: React.FC<Props> = ({ desc, title, Icon }) => {
       <p className="text-customGreen mt-3 mb-[2px] text-base font-bold">
         {title}
       </p>
-      <p className="text-sm">{desc}</p>
+      <p className="text-sm text-[#64717C]" >{desc}</p>
     </div>
   );
 };

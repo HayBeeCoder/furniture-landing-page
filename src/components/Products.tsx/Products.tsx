@@ -56,8 +56,8 @@ const PRODUCTS = [
 
   return (
     
-    <section className=' lg:px-24 py-[40px] '>
-      <div className='px-8'>
+    <section className=' lg:px-24 pb-36 '>
+      <div className=''>
 
         <h3 className='font-nuto text-customGreen text-[35px] font-bold leading-tight'>Products</h3>
         <div className='flex justify-center  gap-[32px] lg:gap-[64px] mb-6 mt-[40px] lg:mb-[120px]'>

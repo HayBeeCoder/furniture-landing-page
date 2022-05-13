@@ -29,3 +29,9 @@
         src: url("./assets/fonts/google-sans/ProductSans-Light.woff") format("woff");
     }
 }
+
+@layer components{
+    .circle{
+        @apply w-20 h-20 rounded-full bg-blue-700;
+    }
+}

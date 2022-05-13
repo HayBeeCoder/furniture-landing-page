@@ -1,12 +1,16 @@
-import React from "react";
+import React, { useRef } from "react";
 import { ABOUT } from "./About.constant";
 import AboutItem from "./AboutItem";
+import useHeaderAnimation from "../hooks/useHeaderAnimation.hook";
 
 const About = () => {
+  const aboutHeaderRef = useRef(null)
+  // const 
+  // useHeaderAnimation(aboutHeaderRef)
   return (
-    <section className="px-8 py-12  lg:px-24 ">
+    <section className="px-8 pb-36  lg:px-24 ">
       <div className="mb-7 text-center md:w-80 md:text-left">
-        <h2 className="font-nuto text-customGreen text-[35px] font-bold leading-tight">
+        <h2 ref={aboutHeaderRef} className="font-nuto text-customGreen text-[35px] font-bold leading-tight">
           About Us
         </h2>
         <p className="text-sm leading-5">

@@ -3,20 +3,22 @@ import { useState } from 'react';
 import Hamburger from '../Hamburger';
 import HamburgerContainer from '../Hamburger/HamburgerContainer';
 
+const NavItem = (item: string) => <a href='' className='active:text-customGreen px-4 py-2  cursor-pointer border-solid hover:border-b-[1px] hover:border-gray-300 active:border-customGreen  text-xl md:text-base'> {item}</a>
 const Header = () => {
     //has to be here
     const [open , setOpen] = useState<boolean>(false)
+
     
+    // [[[[[[[[[[[[[[[[[[[[event handlers]]]]]]]]]]]]]]]]]]]]
+    //needs refactoring , try creating a single function that will perform both navslide & overlay functions
     const handleClick = ()  => setOpen(!open)
 
-    //needs refactoring , try creating a single function that will perform both navslide & overlay functions
     const NavSlide = (isOpen: boolean) =>  isOpen ? " translate-x-0 delay-150" : " translate-x-full delay-150 "
     const OverlaySlide = (isOpen: boolean) =>  isOpen ? " translate-x-0 " : " translate-x-full  delay-150"
     
+    
+    
 
-
-
-    const NavItem = (item: string) => <a href='' className='active:text-customGreen px-4 py-2 md:text-xs cursor-pointer border-solid hover:border-b-[1px] hover:border-gray-300 active:border-customGreen  text-xl'> {item}</a>
 
 
     return (

@@ -1,79 +1,14 @@
 // import Mashable from "../../assets/icons/banner/mashable.svg";
 import { BRANDS } from "./Banner.constants";
+import useCarouselAnimation from "./useCarouselAnimation.hook";
 import gsap from "gsap";
-
 import React, { useEffect, useRef } from "react";
+
+const SCREEN_WIDTH = window.innerWidth;
 
 const Banner = () => {
   const boxRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const screenWidth = window.innerWidth;
-    
-    if (screenWidth <= 768) {
-      let baseWidth = boxRef?.current?.offsetWidth;
-      let width: number;
-      if (baseWidth != undefined) width = baseWidth;
-
-      console.log("baseWidth: ", baseWidth);
-
-      gsap.set(".carousel-item", {
-        x: (i) => i * (baseWidth != undefined ? baseWidth : 1),
-      });
-
-      let wrapWidth =
-        (BRANDS.length - 1) * (baseWidth != undefined ? baseWidth : 1);
-
-      let tl = gsap.timeline({ repeat: -1 }).pause();
-      setTimeout(() => {
-        tl.to(".carousel-item", {
-          duration: 14,
-          x: "-=" + (width + wrapWidth),
-          ease: "none",
-          modifiers: {
-            x: gsap.utils.unitize(gsap.utils.wrap(-width, wrapWidth)),
-          },
-        }).play();
-
-        //Following statements add several pauses to the timeline so the individual items stay in screen for 1 second before resuming the animation.
-        // tl.addPause(1, () => {
-        //   setTimeout(() => {
-        //     tl.play();
-        //   }, 1000);
-        // });
-
-        // tl.addPause(2, () => {
-        //   setTimeout(() => {
-        //     tl.play();
-        //   }, 1000);
-        // });
-
-        // tl.addPause(3, () => {
-        //   setTimeout(() => {
-        //     tl.play();
-        //   }, 1000);
-        // });
-
-        // tl.addPause(4, () => {
-        //   setTimeout(() => {
-        //     tl.play();
-        //   }, 1000);
-        // });
-
-        // tl.addPause(5, () => {
-        //   setTimeout(() => {
-        //     tl.play();
-        //   }, 1000);
-        // });
-
-        // tl.addPause(6, () => {
-        //   setTimeout(() => {
-        //     tl.play();
-        //   }, 1000);
-        // });
-      }, 2000);
-    }
-  }, []);
+  useCarouselAnimation(boxRef,BRANDS,SCREEN_WIDTH)
 
   return (
     <section className="bg-[#F4F6F6] pt-20 pb-10 text-center  lg:pb-0">

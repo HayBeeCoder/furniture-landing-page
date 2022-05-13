@@ -5,7 +5,7 @@ import Client from "../../assets/images/testimonials/manPotrait.jpg"
 
 const Testimonials = () => {
     return (
-        <section className='py-[112px] mx-[15px] lg:mx-[90px] bg-[#244D4D] bg-opacity-5 px-5 overflow-hidden'>
+        <section className='py-[112px] mb-36 mx-[15px] lg:mx-[90px] bg-[#244D4D] bg-opacity-5 px-5 overflow-hidden'>
             <div className='max-w-[350px] lg:text-center lg:mx-auto'>
 
             <h2 className="font-nuto text-customGreen text-[35px] font-bold leading-tight text-left">
@@ -16,7 +16,7 @@ const Testimonials = () => {
             </p>
             </div>
             <div className='mt-16 lg:mt-25 flex flex-col gap-6 lg:flex-row lg:gap-10 items-start lg:justify-center '>
-                    <div className='w-64  lg:w-72 lg:h-96 rounded-lg overflow-hidden lg:mx-auto  '>
+                    <div className='w-64 mx-auto  lg:mx-0 lg:w-72 lg:h-96 rounded-lg overflow-hidden'>
 
                 <img src={Client}  className="object-fill w-full " />
                 </div>
