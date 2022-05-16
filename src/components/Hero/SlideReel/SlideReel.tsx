@@ -10,7 +10,7 @@ const SlideReel:React.FC<Props> = ({slideArray}) => {
     return (
         <>
             {
-                slideArray.map(image => <Slide imageSource={image}/>)
+                slideArray.map((image,index) => <Slide imageSource={image} key={index}/>)
             }
         </>
     );

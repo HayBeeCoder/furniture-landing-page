@@ -3,7 +3,7 @@ import { useState } from 'react';
 import Hamburger from '../Hamburger';
 import HamburgerContainer from '../Hamburger/HamburgerContainer';
 
-const NavItem = (item: string) => <a href='' className='active:text-customGreen px-4 py-2  cursor-pointer border-solid hover:border-b-[1px] hover:border-gray-300 active:border-customGreen  text-xl md:text-base'> {item}</a>
+const NavItem = (item: string , key: number) => <a href='' key={key} className='active:text-customGreen px-4 py-2  cursor-pointer border-solid hover:border-b-[1px] hover:border-gray-300 active:border-customGreen  text-xl md:text-base'> {item}</a>
 const Header = () => {
     //has to be here
     const [open , setOpen] = useState<boolean>(false)
@@ -35,7 +35,7 @@ const Header = () => {
 
 
             <nav className={'fixed z-50  flex flex-col h-screen md:h-max md:w-max top-0 w-4/5 items-center justify-center  right-0 md:relative transform transition-transform ease-in bg-white md:transform-none  md:gap-2 md:justify-between md:flex-row text-left rounded-tl-md rounded-bl-md' + NavSlide(open)}>
-                    {["Home" , "About" ,"Features" , "Contact"].map(item => NavItem(item) )}
+                    {["Home" , "About" ,"Features" , "Contact"].map((item,index) => NavItem(item , index) )}
         </nav>
             <HamburgerContainer > 
                 {<Hamburger isOpen={open} handleClick={handleClick}/>}

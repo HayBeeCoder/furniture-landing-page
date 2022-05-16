@@ -62,13 +62,13 @@ const PRODUCTS = [
         <h3 className='font-nuto text-customGreen text-[35px] font-bold leading-tight'>Products</h3>
         <div className='flex justify-center  gap-[32px] lg:gap-[64px] mb-6 mt-[40px] lg:mb-[120px]'>
 
-        {CATEGORIES.map((category,index) => (<ProductCategory active={index === activeCategory} handleClick={handleCategoryClick} index={index}>{category}</ProductCategory >))}
+        {CATEGORIES.map((category,index) => (<ProductCategory active={index === activeCategory} handleClick={handleCategoryClick} index={index} key={index}>{category}</ProductCategory >))}
         </div>
       </div>
         <div className='grid grid-cols-2 md:grid-cols-3 w-full justify-around flex-wrap gap-1 md:gap-2 lg:gap-5 '>
 
-        {PRODUCTS.map(product => (
-          <Product productDet={product}/>
+        {PRODUCTS.map((product,key) => (
+          <Product productDet={product} key={key} />
           ))}
           </div>
 

@@ -23,7 +23,7 @@ const PerkBanner = () => {
       <div className="flex flex-col gap-10 md:flex-row  lg:gap-4 ">
         
         {
-            PERKS.map(perk =>  <Perk title={perk.title} desc={perk.paragraph} Icon={perk.icon} />)
+            PERKS.map((perk,index) =>  <Perk title={perk.title} desc={perk.paragraph} Icon={perk.icon} key={index}/>)
         }
       </div>
     </section>

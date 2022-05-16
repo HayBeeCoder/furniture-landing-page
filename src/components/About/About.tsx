@@ -25,6 +25,7 @@ const About = () => {
               title={about.title}
               desc={about.desc}
               index={index.toString() + "."}
+              key={index}
             />
           ))}
         </div>

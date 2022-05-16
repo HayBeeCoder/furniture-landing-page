@@ -20,9 +20,9 @@ const Banner = () => {
         className="relative flex h-24 overflow-hidden lg:h-max  lg:justify-around"
         ref={boxRef}
       >
-        {BRANDS.map((Brand) => {
+        {BRANDS.map((Brand,index) => {
           return (
-            <div className="carousel-item absolute  top-1/2  flex h-full min-w-full -translate-y-1/2 items-center justify-center  pt-5 lg:relative  lg:top-0 lg:h-40 lg:min-w-fit lg:-translate-y-0 lg:pt-0">
+            <div className="carousel-item absolute  top-1/2  flex h-full min-w-full -translate-y-1/2 items-center justify-center  pt-5 lg:relative  lg:top-0 lg:h-40 lg:min-w-fit lg:-translate-y-0 lg:pt-0"key={index} >
               <Brand className="inline-block text-8xl" />
             </div>
           );

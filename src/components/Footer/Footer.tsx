@@ -9,9 +9,9 @@ const Footer = () => {
     return (
         <footer className='bg-[#244D4D] py-16 lg:py-[100px] px-5 lg:px-[100px] '>
             <div className=' flex gap-4 flex-col lg:flex-row lg:justify-between border-b-[1px] pb-20 border-opacity-5'>
-                <p className='text-white text-3 text-3xl lg:text-[44px] max-w-[640px] leading-tight'>
+                <div className='text-white text-3 text-3xl lg:text-[44px] max-w-[640px] leading-tight'>
                     Start your business today for  <pre className='inline'>$</pre>0+ state fees.
-                </p>
+                </div>
 
                 <div className=''>
                     <div className='mr-[2px] inline'>
